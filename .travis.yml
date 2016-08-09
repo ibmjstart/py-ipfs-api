@@ -14,6 +14,6 @@ install:
   - "pip install -r test-requirements.txt"
 script:
   - ipfs init
-  - ipfs daemon
+  - ipfs daemon &
   - tox -e pep8
   - tox
