@@ -8,7 +8,7 @@ before_script:
   - wget "https://dist.ipfs.io/go-ipfs/v0.4.2/go-ipfs_v0.4.2_linux-amd64.tar.gz" -O /tmp/ipfs.tar.gz
   - mkdir $HOME/bin
   - pushd . && cd $HOME/bin && tar -xzvf /tmp/ipfs.tar.gz && popd
-  - export PATH="$HOME/bin:$PATH"
+  - export PATH="$HOME/bin/go-ipfs:$PATH"
 install:
   - "pip install -r requirements.txt"
   - "pip install -r test-requirements.txt"
