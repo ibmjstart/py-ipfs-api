@@ -5,10 +5,10 @@ python:
   - "3.4"
   - "3.5"
 before_script:
-  - wget "https://github.com/ipfs/go-ipfs/archive/v0.4.3-rc2.tar.gz" -O /tmp/ipfs.tar.gz
-  - mkdir $HOME/bin
-  - pushd . && cd $HOME/bin && tar -xzvf /tmp/ipfs.tar.gz && popd
-  - export PATH="$HOME/bin/go-ipfs:$PATH"
+  - echo $GOPATH
+  - echo $PATH
+  - go get -d github.com/ipfs/go-ipfs
+  - pushd . && cd $GOPATH/src/github.com/ipfs/go-ipfs && make install && popd
 install:
   - "pip install -r requirements.txt"
   - "pip install -r test-requirements.txt"
