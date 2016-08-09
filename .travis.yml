@@ -5,6 +5,7 @@ python:
   - "3.4"
   - "3.5"
 before_script:
+  - eval "$(gimme 1.6)"
   - mkdir $HOME/go
   - export GOPATH="$HOME/go"
   - export PATH="$PATH:$GOPATH/bin"
