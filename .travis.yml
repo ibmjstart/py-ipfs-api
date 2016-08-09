@@ -5,6 +5,9 @@ python:
   - "3.4"
   - "3.5"
 before_script:
+  - mkdir $HOME/go
+  - export GOPATH="$HOME/go"
+  - export PATH="$PATH:$GOPATH/bin"
   - echo $GOPATH
   - echo $PATH
   - go get -d github.com/ipfs/go-ipfs
